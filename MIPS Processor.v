@@ -394,9 +394,7 @@ pc_adder my_pc_adder(pc_adder_op ,current_pc );
 adder my_adder (adder_op,(sign_extend_op<<2) , pc_adder_op); 
 mux2_ip_32 My_mux11(zero_dest,pc_adder_op,adder_op,sel); // first mux after adder 
 mux2_ip_32 My_Mux111(new_zero_dest,zero_dest,adder_op,sel2);
-mux2_ip_32 My_Mux1111(next_pc,new_zero_dest,jump_wire,jump); // last mux ... sheel zero dest w 7ot el op bta3 el mux el gded
-
-
+mux2_ip_32 My_Mux1111(next_pc,new_zero_dest,jump_wire,jump); 
 mux2_ip_32 My_JR_MUX (PC_in,next_pc,read1,Jr_flag);
 endmodule 
 
@@ -416,14 +414,3 @@ reset = 1;
 reset = 0;            
 end 
 endmodule 
-
-
-
-
-
-
-
-
-
-
-
